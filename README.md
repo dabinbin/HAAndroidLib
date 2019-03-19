@@ -1,8 +1,6 @@
----
-description: 'https://102.alibaba.com/downloadFile.do?file=1520478361732/Android_v9.pdf'
----
 
 # 播种网android编码规范
+[参考阿里开发文档](https://102.alibaba.com/downloadFile.do?file=1520478361732/Android_v9.pdf)
 
 ### 1. 资源文件需带模块前缀.
 
