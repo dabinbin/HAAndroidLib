@@ -121,7 +121,7 @@ observable.subscribe(observer);
 
 文字叙述总归难理解，上代码：
 
-```text
+```java
 Observable.just(1, 2, 3, 4)
     .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
     .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
@@ -149,7 +149,7 @@ RxJava 提供了对事件序列进行变换的支持，这是它的核心功能�
 
 首先看一个 `map()` 的例子
 
-```text
+```java
 Observable.just("images/logo.png") // 输入类型 String
     .map(new Func1<String, Bitmap>() {
         @Override

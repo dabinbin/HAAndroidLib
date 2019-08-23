@@ -214,5 +214,74 @@ getToken()
     });
 ```
 
+### 延伸...
+
+组合多个Observable。
+
+**zip**： 使用一个函数组合多个Observable发射的数据集合，然后再发射这个结果。如果多个Observable发射的数据量不一样，则以最少的Observable为标准进行压合。内部通过`OperatorZip`进行压合。
+
+```java
+Observable.zip(Network.getGankApi().getBeauties(200, 1),
+                Network.getZhuangbiApi().search("装逼"),
+                new BiFunction<List<Item>, List<ZhuangbiImage>, List<Item>>() {
+                    @Override
+                    public List<Item> apply(List<Item> gankItems, List<ZhuangbiImage> zhuangbiImages) {
+                        List<Item> items = new ArrayList<Item>();
+                        for (int i = 0; i < gankItems.size() / 2 && i < zhuangbiImages.size(); i++) {
+                            items.add(gankItems.get(i * 2));
+                            items.add(gankItems.get(i * 2 + 1));
+                            Item zhuangbiItem = new Item();
+                            ZhuangbiImage zhuangbiImage = zhuangbiImages.get(i);
+                            zhuangbiItem.description = zhuangbiImage.description;
+                            zhuangbiItem.imageUrl = zhuangbiImage.image_url;
+                            items.add(zhuangbiItem);
+                        }
+                        return items;
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<List<Item>>() {
+                    @Override
+                    public void accept(@NonNull List<Item> items) throws Exception {
+                        swipeRefreshLayout.setRefreshing(false);
+                        adapter.setItems(items);
+                    }
+                });
+```
+
+其他, 还有
+
+**concat**： 按顺序连接多个Observables。需要注意的是`Observable.concat(a,b)`等价于`a.concatWith(b)`。
+
+```java
+Observable<Integer> observable1=Observable.just(1,2,3,4);
+Observable<Integer>  observable2=Observable.just(4,5,6);
+
+Observable.concat(observable1,observable2)
+            .subscribe(item->Log.d("JG",item.toString()));//1,2,3,4,4,5,6
+```
+
+**startWith**： 在数据序列的开头增加一项数据。`startWith`的内部也是调用了`concat`
+
+```java
+ Observable.just(1,2,3,4,5)
+            .startWith(6,7,8)
+    .subscribe(item->Log.d("JG",item.toString()));//6,7,8,1,2,3,4,5
+```
+
+**merge**： 将多个Observable合并为一个。不同于concat，merge不是按照添加顺序连接，而是按照时间线来连接。其中`mergeDelayError`将异常延迟到其它没有错误的Observable发送完毕后才发射。而`merge`则是一遇到异常将停止发射数据，发送onError通知。
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
