@@ -270,6 +270,23 @@ Observable.create(onSubscribe)
     .subscribe(subscriber);
 ```
 
+**ConnectableObservable**
+
+可连接的Observable。在被订阅时并不开始发射数据，只有在它的connect\(\)被调用的时候才开始发射数据。可以等所有潜在的订阅者都订阅了这个Observable之后才开始发射数据。
+
+```java
+ConnectableObservable<Object> publish = Observable.empty().publish();
+
+//订阅了 并不会开始发消息
+publish.subscribe(observer1);
+publish.subscribe(observer2);
+publish.subscribe(observer3);
+publish.subscribe(observer4);
+
+//这个时候才会开始
+publish.connect();
+```
+
   
 
 
