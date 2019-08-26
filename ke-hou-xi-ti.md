@@ -48,7 +48,7 @@ Flowable.range(0,Integer.MAX_VALUE)
                         });//mingbin 0-127 然后直接到int.max
 ```
 
-打印0-127, 然后直接到int.max终止
+打印0-127, 在127停了很久.....然后突然直接到int.max终止
 
 ![](.gitbook/assets/image.png)
 
