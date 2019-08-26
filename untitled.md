@@ -12,9 +12,9 @@ rxjava的从入门到放弃:  [https://mp.weixin.qq.com/s/-D1\_DV6amGfz4GPlpdDpJ
 
 截一段他自己的话,  其实,  我觉得他也是写来装装逼....
 
-![](.gitbook/assets/image%20%283%29.png)
+![](.gitbook/assets/image%20%284%29.png)
 
-![](.gitbook/assets/image%20%282%29.png)
+![](.gitbook/assets/image%20%283%29.png)
 
 开始讲课....
 
