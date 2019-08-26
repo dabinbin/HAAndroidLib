@@ -4,33 +4,26 @@ description: 几个当时没有解答出来的问题
 
 # 课后习题
 
-complete 会不会调\(不会\)
-
-￼￼
+### 1.complete 会不会调\(不会\)
 
 ![](.gitbook/assets/image%20%2810%29.png)
 
-just\(aaa\[\]\)
+### 2.just\(aaa\[\]\)
 
 ![](.gitbook/assets/image.png)
 
 ![](.gitbook/assets/image%20%286%29.png)
 
-策略 last
+### 3.背压策略 last
 
-![](.gitbook/assets/image%20%287%29.png)
-
-Flowable.range\(0,Integer.MAX\_VALUE\)
-
-        .onBackpressureLatest\(\)
-
-        .subscribe\(a -&gt; {
-
-            Thread.sleep\(100\);
-
-            Log.i\("mingbin”,a+""\);
-
-        }\);
+```java
+Flowable.range(0,Integer.MAX_VALUE)
+                        .onBackpressureLatest()
+                        .subscribe(aLong -> {
+                            Thread.sleep(100);
+                            Log.i("mingbin",aLong+"");
+                        });
+```
 
 Log 一直打印1 到int.max
 
