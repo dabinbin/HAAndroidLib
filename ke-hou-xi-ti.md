@@ -8,15 +8,17 @@ complete 会不会调\(不会\)
 
 ￼￼
 
-![](.gitbook/assets/image%20%289%29.png)
+![](.gitbook/assets/image%20%2810%29.png)
 
 just\(aaa\[\]\)
 
 ![](.gitbook/assets/image.png)
 
+![](.gitbook/assets/image%20%286%29.png)
+
 策略 last
 
-![](.gitbook/assets/image%20%286%29.png)
+![](.gitbook/assets/image%20%287%29.png)
 
 Flowable.range\(0,Integer.MAX\_VALUE\)
 
@@ -34,5 +36,5 @@ Log 一直打印1 到int.max
 
 内存情况, 启动这段代码后  内存反而降低了很神奇￼
 
-![](.gitbook/assets/image%20%288%29.png)
+![](.gitbook/assets/image%20%289%29.png)
 
