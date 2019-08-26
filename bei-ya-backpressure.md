@@ -32,7 +32,7 @@ Observable.create(new ObservableOnSubscribe<Integer>() {
 
 可以通过 Monitors 发现内存使用快速增长。
 
-![](.gitbook/assets/image%20%281%29.png)
+![](.gitbook/assets/image%20%284%29.png)
 
 ### Flowable <a id="Flowable"></a>
 
@@ -83,7 +83,7 @@ Flowable.create(new FlowableOnSubscribe<Integer>() {
 2. `onSubscribe` 回调的参数不是 `Disposable` 而是 `Subscription`。而且需要调用 `Subscription.request` 发起数据请求，否则Subscriber不会接受数据。
 3. 数据发射器是 `FlowableEmitter` 而不是 `ObservableEmitter`。
 
-![](.gitbook/assets/image%20%282%29.png)
+![](.gitbook/assets/image%20%281%29.png)
 
 打印结果：
 

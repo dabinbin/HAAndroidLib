@@ -14,7 +14,7 @@ rxjava的从入门到放弃:  [https://mp.weixin.qq.com/s/-D1\_DV6amGfz4GPlpdDpJ
 
 ![](.gitbook/assets/image%20%283%29.png)
 
-![](.gitbook/assets/image%20%284%29.png)
+![](.gitbook/assets/image%20%282%29.png)
 
 开始讲课....
 
