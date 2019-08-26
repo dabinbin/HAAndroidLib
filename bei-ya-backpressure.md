@@ -32,7 +32,7 @@ Observable.create(new ObservableOnSubscribe<Integer>() {
 
 可以通过 Monitors 发现内存使用快速增长。
 
-![](.gitbook/assets/image%20%284%29.png)
+![](.gitbook/assets/image%20%285%29.png)
 
 ### Flowable <a id="Flowable"></a>
 

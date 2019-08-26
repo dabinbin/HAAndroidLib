@@ -272,7 +272,7 @@ Observable.concat(observable1,observable2)
 
 **merge**： 将多个Observable合并为一个。不同于concat，merge不是按照添加顺序连接，而是按照时间线来连接。其中`mergeDelayError`将异常延迟到其它没有错误的Observable发送完毕后才发射。而`merge`则是一遇到异常将停止发射数据，发送onError通知。
 
-![](.gitbook/assets/image%20%285%29.png)
+![](.gitbook/assets/image%20%286%29.png)
 
 关于compose的一个方便用法,  每次网络请求的时候展示loading转圈,  请求结束自动关闭
 
