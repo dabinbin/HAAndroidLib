@@ -52,3 +52,29 @@ Flowable.range(0,Integer.MAX_VALUE)
 
 ![](.gitbook/assets/image.png)
 
+### 4.关于翻译的问题
+
+latest一般翻译为最新的意思,  但是如果翻译成最新的话 就不符合这个背压的策略了, 于是 ....应该请一下英语八级的大佬出来:....
+
+"what do you think of his latest play?"
+
+"I like it much better than his last one.".
+
+这两句话怎么翻译呢?
+
+1,  你可能翻译为: "你觉得他最新的一次表演怎么样? "     "比起上次的那个,我更喜欢这个."   \(中国人平均水平\)
+
+2. "他最后的那场演出你觉得怎样?"   "比他上一场好多了。"   这样翻译,  latest = 最后的,  就能对应上这个策略的问题
+
+
+
+
+
+
+
+
+
+
+
+
+
